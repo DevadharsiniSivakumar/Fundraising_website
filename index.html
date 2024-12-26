@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FundRaisePro - Dynamic Fundraising Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+  </head>
+  <body>
+        
+    <header>
+      <nav class="navbar">
+        <div class="logo">FundRaisePro</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+        <button class="login-btn" onclick="location.href='login.html';">
+          Login
+        </button>
+      </nav>
+    </header>
+
+    <section id="home" class="hero-section" style="background-image : url('bg.4.jpg');">
+
+      <div class="hero-content">
+        <h1>Empower Your Fundraising Journey</h1>
+        <p>Discover a platform designed to bring your campaigns to life.</p>
+        <button class="cta-btn" onclick="location.href='user.html';">
+          Get Started
+        </button>
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <h2>Core Features</h2>
+      <div class="tabs">
+        <button
+          class="tab-button"
+          data-tab="user"
+          onclick="location.href='user.html';" 
+        >
+        <img src="user.jpg" class="image" alt="user.jpg">
+          User Registration
+        </button>
+        
+        <button
+          class="tab-button"
+          data-tab="campaign"
+          onclick="location.href='management.html';"
+        >
+        <img src="manage.jpg" class="image" alt="user.jpg">
+          Campaign Management
+        </button>
+        <button
+          class="tab-button"
+          data-tab="donation"
+          onclick="location.href='dprocessing.html';"
+        >
+        <img src="donation.jpg" class="image" alt="user.jpg">
+          Donation Processing
+        </button>
+        
+        <button
+          class="tab-button"
+          data-tab="discovery"
+          onclick="location.href='search.html';"
+        >
+        <img src="discover.jpg" class="image" alt="user.jpg">
+          Search & Discovery
+        </button>
+        <button class="tab-button" data-tab="tracking" onclick="location.href='tracking.html';">
+            <img src="progress.jpg" class="image" alt="user.jpg">
+          Progress Tracking
+        </button>
+      </div>
+
+      <div class="tab-content" id="user">
+        <h3>User Registration and Profiles</h3>
+        <ul>
+          <li>Sign-up/login for fundraisers and donors.</li>
+          <li>Social media integration for quick sign-up.</li>
+          <li>Profile management with customizable fundraiser pages.</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="campaign">
+        <h3>Campaign Management</h3>
+        <ul>
+          <li>Easy creation and editing of fundraising campaigns.</li>
+          <li>Options to add images, videos, and detailed descriptions.</li>
+          <li>Categories and tags for better discoverability.</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="donation">
+        <h3>Donation Processing</h3>
+        <ul>
+          <li>
+            Multiple payment gateways (credit/debit cards, PayPal, UPI, etc.).
+          </li>
+          <li>Recurring donation options.</li>
+          <li>Suggested donation amounts with custom options.</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="discovery">
+        <h3>Search and Discovery</h3>
+        <ul>
+          <li>
+            Advanced search filters (location, category, target amount, etc.).
+          </li>
+          <li>Featured and trending campaigns on the homepage.</li>
+          <li>Personalized recommendations based on user preferences.</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="tracking">
+        <h3>Progress Tracking</h3>
+        <ul>
+          <li>Real-time donation tracking with progress bars.</li>
+          <li>Updates and milestones for campaigns.</li>
+          <li>
+            Donor impact reports showing how contributions are being used.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="community" class="community-section">
+      <h2>Community and Support</h2>
+      <p>Join our forums to connect with other fundraisers and donors.</p>
+      <ul>
+        <li>Community forums for sharing ideas and feedback.</li>
+        <li>24/7 customer support via chat, email, and phone.</li>
+        <li>Knowledge base and FAQs for self-help.</li>
+      </ul>
+    </section>
+
+    <section id="support" class="support-section">
+      <h2>Legal and Compliance</h2>
+      <ul>
+        <li>Clear terms of use and refund policies.</li>
+        <li>Automatic generation of donation receipts for tax purposes.</li>
+        <li>Integration with tax deduction systems where applicable.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 FundRaisePro. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
