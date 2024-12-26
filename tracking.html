@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraising Progress Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #f39c12;
+            margin: 0;
+        }
+        .container {
+            margin: 20px;
+        }
+        .campaign {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .campaign h3 {
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+        .campaign p {
+            color: #bbb;
+            margin: 5px 0;
+        }
+        .progress-bar-container {
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #00bcd4;
+            width: 0;
+            transition: width 0.5s ease-in-out;
+        }
+        .progress-text {
+            text-align: right;
+            font-size: 14px;
+            color: #fff;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fundraising Progress Tracker</h1>
+    </header>
+
+    <div class="container">
+        <div class="campaign">
+            <h3>Campaign 1: Help Build a School</h3>
+            <p>Goal: $50,000</p>
+            <p>Raised: $30,000</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+            <div class="progress-text">60% Complete</div>
+        </div>
+
+        <div class="campaign">
+            <h3>Campaign 2: Disaster Relief Fund</h3>
+            <p>Goal: $100,000</p>
+            <p>Raised: $70,000</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+            <div class="progress-text">70% Complete</div>
+        </div>
+
+        <div class="campaign">
+            <h3>Campaign 3: Support Animal Shelters</h3>
+            <p>Goal: $20,000</p>
+            <p>Raised: $5,000</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 25%;"></div>
+            </div>
+            <div class="progress-text">25% Complete</div>
+        </div>
+    </div>
+
+</body>
+</html>

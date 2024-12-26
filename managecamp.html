@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Campaign - Fundraising</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #00bcd4;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .campaign-management {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .campaign-management h2 {
+            color: #00bcd4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            color: #bbb;
+            font-size: 16px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: #fff;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #00bcd4;
+        }
+        button {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0097a7;
+        }
+        .donations {
+            margin-top: 30px;
+        }
+        .donation-list {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .donation-item {
+            margin-bottom: 15px;
+            color: #bbb;
+        }
+        .donation-item span {
+            color: #00bcd4;
+        }
+        .back-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #444;
+        }
+        .home-button {
+        text-decoration: none;
+        color: #312b21;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        background-color: #f39c12;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Manage Your Campaign</h1>
+        <button class="home-button" onclick="location.href='index.html';">
+            Home
+          </button>
+    </header>
+
+    <div class="container">
+        <div class="campaign-management">
+            <h2>Campaign Details</h2>
+            <form action="managecamp.html" method="POST">
+                <div class="form-group">
+                    <label for="title">Campaign Title</label>
+                    <input type="text" id="title" name="title" value="Help Us Build a School for Underprivileged Children" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Campaign Description</label>
+                    <textarea id="description" name="description" rows="5" required>We are raising funds to build a school for children in underdeveloped regions. Your donation will help provide education, books, and a safe learning environment for children who need it the most.</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="goal">Fundraising Goal ($)</label>
+                    <input type="number" id="goal" name="goal" value="5000" required>
+                </div>
+                <div class="form-group">
+                    <label for="raised">Amount Raised ($)</label>
+                    <input type="number" id="raised" name="raised" value="2000" required>
+                </div>
+                <button type="submit">Update Campaign</button>
+            </form>
+
+            <div class="donations">
+                <h2>Recent Donations</h2>
+                <div class="donation-list">
+                    <div class="donation-item">
+                        <span>John Doe</span> donated $100 on 12/01/2024
+                    </div>
+                    <div class="donation-item">
+                        <span>Jane Smith</span> donated $50 on 12/03/2024
+                    </div>
+                    <div class="donation-item">
+                        <span>Mark Wilson</span> donated $200 on 12/05/2024
+                    </div>
+                </div>
+            </div>
+            <a href="management.html" class="back-button">Back to Campaigns</a>
+        </div>
+    </div>
+
+</body>
+</html>

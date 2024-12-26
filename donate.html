@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Fundraising Campaign</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #00bcd4;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .donation-section {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .donation-section h2 {
+            color: #00bcd4;
+        }
+        .donation-section p {
+            color: #bbb;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #444;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .progress-bar-inner {
+            height: 20px;
+            background-color: #00bcd4;
+            border-radius: 5px;
+            width: 40%; /* Example: 40% of the goal has been raised */
+        }
+        .donate-form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            color: #bbb;
+            font-size: 16px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: #fff;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #00bcd4;
+        }
+        .donate-button {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .donate-button:hover {
+            background-color: #0097a7;
+        }
+        .back-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #444;
+        }
+        .home-button {
+        text-decoration: none;
+        color: #312b21;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        background-color: #f39c12;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Donate to Campaign</h1>
+        <button class="home-button" onclick="location.href='index.html';">
+            Home
+          </button>
+    </header>
+
+    <div class="container">
+        <div class="donation-section">
+            <!--<h2>Help Us Build a School for Underprivileged Children</h2>
+            <p>We are raising funds to build a school for children in underdeveloped regions. Your donation will help provide education, books, and a safe learning environment for children who need it the most.</p>
+        -->
+            <h3>Goal: $5000</h3>
+            <h3>Amount Raised: $2000</h3>
+
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+
+            <p>We are 40% towards our goal! Every contribution brings us closer to making this dream a reality.</p>
+
+            <div class="donate-form">
+                <h3>Your Donation</h3>
+                <form action="donate.html" method="POST">
+                    <div class="form-group">
+                        <label for="donation-amount">Amount to Donate ($)</label>
+                        <input type="number" id="donation-amount" name="donation-amount" placeholder="Enter amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donor-name">Your Name</label>
+                        <input type="text" id="donor-name" name="donor-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donor-email">Your Email</label>
+                        <input type="email" id="donor-email" name="donor-email" placeholder="Enter your email" required>
+                    </div>
+                   
+                </form>
+            </div>
+            <a href="donatesuccess.html" class="donate-button">Donate Now</a>
+            <a href="management.html" class="back-button">Back to Campaigns</a>
+            
+        </div>
+    </div>
+
+</body>
+</html>

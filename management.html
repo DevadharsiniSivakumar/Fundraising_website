@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campaign Management - Fundraising</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #fff;
+        margin: 0;
+      }
+      header {
+        background-color: #1e1e1e;
+        padding: 20px;
+        text-align: center;
+      }
+      header h1 {
+        color: #f39c12;
+        margin: 0;
+      }
+      .container {
+        padding: 20px;
+      }
+      .campaign-list {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+      .campaign-card {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .campaign-card h3 {
+        color: #f39c12;
+      }
+      .campaign-card p {
+        color: #bbb;
+      }
+      .button {
+        display: inline-block;
+        background-color: #f39c12;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 10px;
+      }
+      .button:hover {
+        background-color: #f39c12;
+      }
+      .create-campaign {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .create-campaign button {
+        background-color: #f39c12;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .create-campaign button:hover {
+        background-color: #f39c12;
+      }
+      .home-button {
+        text-decoration: none;
+        color: #312b21;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        background-color: #f39c12;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Campaign Management</h1>
+      <button class="home-button" onclick="location.href='index.html';">
+        Home
+      </button>
+    </header>
+
+    <div class="container">
+      <div class="create-campaign">
+        <button onclick="window.location.href='createnew.html';">
+          Create New Campaign
+        </button>
+      </div>
+
+      <div class="campaign-list">
+        <!-- Example Campaign Card -->
+        <div class="campaign-card">
+          <h3>Campaign 1 - Fundraising</h3>
+          <p>Goal: $5000</p>
+          <p>Raised: $1200</p>
+          <a href="camp1.html" class="button">View Campaign</a>
+        </div>
+
+        <div class="campaign-card">
+          <h3>Campaign 2 - Build a Health Center for Rural Communities</h3>
+          <p>Goal: $3000</p>
+          <p>Raised: $1500</p>
+          <a href="camp2.html" class="button">View Campaign</a>
+        </div>
+
+        <div class="campaign-card">
+          <h3>Campaign 3 - Provide Clean Water to Rural Villages</h3>
+          <p>Goal: $10000</p>
+          <p>Raised: $7000</p>
+          <a href="camp3.html" class="button">View Campaign</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
