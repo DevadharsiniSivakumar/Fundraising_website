@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Discover Fundraising Campaigns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #00bcd4;
+            margin: 0;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .search-box {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .filter {
+            margin: 0 10px;
+        }
+        .results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .result-item {
+            background-color: #1e1e1e;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .result-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .result-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .result-item p {
+            font-size: 14px;
+            color: #bbb;
+        }
+        .result-item .goal {
+            font-size: 16px;
+            color: #00bcd4;
+            margin-top: 10px;
+        }
+        .result-item .donate-button {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .result-item .donate-button:hover {
+            background-color: #0097a7;
+        }
+        .home-button {
+        text-decoration: none;
+        color: #312b21;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        background-color: #f39c12;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Search and Discover Fundraising Campaigns</h1>
+        <button class="home-button" onclick="location.href='index.html';">
+            Home
+          </button>
+    </header>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search for campaigns..." id="search-input">
+    </div>
+
+    <div class="filters">
+        <div class="filter">
+            <label for="cause">Cause:</label>
+            <select id="cause">
+                <option value="all">All</option>
+                <option value="health">Health</option>
+                <option value="education">Education</option>
+                <option value="disaster-relief">Disaster Relief</option>
+                <option value="animal-rights">Animal Rights</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="goal">Goal:</label>
+            <select id="goal">
+                <option value="all">All</option>
+                <option value="low">Under $5,000</option>
+                <option value="medium">$5,000 - $20,000</option>
+                <option value="high">Over $20,000</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="results" id="campaigns-list">
+        <!-- Campaigns will be dynamically inserted here -->
+        <div class="result-item">
+            <img src="https://via.placeholder.com/250x150" alt="Campaign Image">
+            <h3>Campaign Title 1</h3>
+            <p>Short description of the campaign...</p>
+            <div class="goal">$3,000 raised of $5,000 goal</div>
+            <button class="donate-button">Donate Now</button>
+        </div>
+        <div class="result-item">
+            <img src="https://via.placeholder.com/250x150" alt="Campaign Image">
+            <h3>Campaign Title 2</h3>
+            <p>Short description of the campaign...</p>
+            <div class="goal">$10,000 raised of $20,000 goal</div>
+            <button class="donate-button">Donate Now</button>
+        </div>
+        <!-- More campaigns can be added here -->
+    </div>
+
+    <script>
+        // Sample data for campaigns
+        const campaigns = [
+            {
+                title: "Help Us Build a School for Underprivileged Children",
+                description: "We are raising funds to build a school for children in underdeveloped regions. Your donation will help provide education, books, and a safe learning environment for children who need it the most.",
+                goal: 5000,
+                raised: 3000,
+                cause: "health",
+                image: "edu.jpg"
+            },
+            {
+                title: " Build a Health Center for Rural Communities",
+                description: "We are raising funds to build a health center in rural areas where healthcare access is limited. Your donations will help us provide medical services, equipment, and support to those who need it most.",
+                goal: 20000,
+                raised: 10000,
+                cause: "education",
+                image: "hos.jpg"
+            },
+            {
+                title: "Provide Clean Water to Rural Villages",
+                description: "We are raising funds to provide clean drinking water to villages that suffer from contaminated water sources. Your contribution will help build water wells, install filtration systems, and provide safe water to thousands of people.",
+                goal: 15000,
+                raised: 5000,
+                cause: "disaster-relief",
+                image: "cleanwater.jpg"
+            }
+        ];
+
+        // Function to render campaigns based on search and filters
+        function renderCampaigns() {
+            const searchInput = document.getElementById("search-input").value.toLowerCase();
+            const causeFilter = document.getElementById("cause").value;
+            const goalFilter = document.getElementById("goal").value;
+
+            const filteredCampaigns = campaigns.filter(campaign => {
+                const matchesSearch = campaign.title.toLowerCase().includes(searchInput);
+                const matchesCause = causeFilter === "all" || campaign.cause === causeFilter;
+                const matchesGoal = goalFilter === "all" || (goalFilter === "low" && campaign.goal < 5000) || (goalFilter === "medium" && campaign.goal >= 5000 && campaign.goal <= 20000) || (goalFilter === "high" && campaign.goal > 20000);
+                return matchesSearch && matchesCause && matchesGoal;
+            });
+
+            const campaignsList = document.getElementById("campaigns-list");
+            campaignsList.innerHTML = "";
+
+            filteredCampaigns.forEach(campaign => {
+                const campaignElement = document.createElement("div");
+                campaignElement.classList.add("result-item");
+
+                campaignElement.innerHTML = `
+                    <img src="${campaign.image}" alt="Campaign Image">
+                    <h3>${campaign.title}</h3>
+                    <p>${campaign.description}</p>
+                    <div class="goal">$${campaign.raised} raised of $${campaign.goal} goal</div>
+                    <button class="donate-button" onclick="location.href='donate.html';"> >Donate Now</button>
+                `;
+
+                campaignsList.appendChild(campaignElement);
+            });
+        }
+
+        // Event listeners for search and filter
+        document.getElementById("search-input").addEventListener("input", renderCampaigns);
+        document.getElementById("cause").addEventListener("change", renderCampaigns);
+        document.getElementById("goal").addEventListener("change", renderCampaigns);
+
+        // Initial render
+        renderCampaigns();
+    </script>
+
+</body>
+</html>

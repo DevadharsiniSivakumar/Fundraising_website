@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign 3 - Fundraising</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #00bcd4;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .campaign-details {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .campaign-details h2 {
+            color: #00bcd4;
+        }
+        .campaign-details p {
+            color: #bbb;
+            font-size: 18px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #444;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .progress-bar-inner {
+            height: 20px;
+            background-color: #00bcd4;
+            border-radius: 5px;
+            width: 30%; /* Example: 30% of the goal has been raised */
+        }
+        .donate-button {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .donate-button:hover {
+            background-color: #f39c12;
+        }
+        .back-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #444;
+        }
+        .home-button {
+        text-decoration: none;
+        color: #312b21;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        background-color: #f39c12;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Campaign 3 - Help Provide Clean Water</h1>
+        <button class="home-button" onclick="location.href='index.html';">
+            Home
+          </button>
+    </header>
+
+    <div class="container">
+        <div class="campaign-details">
+            <h2>Campaign Title: Provide Clean Water to Rural Villages</h2>
+            <p>We are raising funds to provide clean drinking water to villages that suffer from contaminated water sources. Your contribution will help build water wells, install filtration systems, and provide safe water to thousands of people.</p>
+            
+            <h3>Goal: $15,000</h3>
+            <h3>Amount Raised: $4,500</h3>
+
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+
+            <p>We are 30% towards our goal! Your donation can change lives by providing access to clean and safe water.</p>
+
+            <a href="donate.html" class="donate-button">Donate Now</a>
+            <a href="management.html" class="back-button">Back to Campaigns</a>
+        </div>
+    </div>
+
+</body>
+</html>
