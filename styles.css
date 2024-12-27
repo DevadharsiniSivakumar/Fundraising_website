@@ -111,12 +111,14 @@ header {
 .features-section {
     padding: 2rem;
     background: #1e1e1e;
+    height: 500px;
 }
 
 .features-section h2 {
     text-align: center;
     margin-bottom: 2rem;
     color: #f39c12;
+    padding-top: 100px;
 }
 
 .tabs {
@@ -124,6 +126,7 @@ header {
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
+    padding-top: 50px ;
 }
 
 .tab-button {
@@ -158,34 +161,37 @@ header {
 .community-section {
     padding: 2rem;
     background: #5e5d5d;
-    height: fit-content;
+    height: 200px;
+    padding: 100px;
 }
 
 .community-section h2 {
     text-align: center;
     margin-bottom: 1rem;
     color: #f39c12;
+    font-size: 40px;
+    padding-top: 5px;
 }
 
 .community-section p{
     color: #ffffff;
-    font-size: larger;
+    font-size: 30px;
     text-align: center;
 }
 .community-section ul{
     color: #ffffff;
-    font-size: large;
+    font-size: 20px;
     text-align: center;
 }
 
 .support-section p{
     color: #ffffff;
-    font-size: larger;
+    font-size: 30px;
     text-align: center;
 }
 .support-section ul{
     color: #ffffff;
-    font-size: large;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -193,13 +199,17 @@ header {
 /* Support Section */
 .support-section {
     padding: 2rem;
-    background: #1e1e1e;
+    background: #232222;
+    height: 200px;
+    padding: 100px;
 }
 
 .support-section h2 {
     text-align: center;
     margin-bottom: 1rem;
     color: #f39c12;
+    font-size: 40px;
+    padding-top: 5px;
 }
 
 /* Footer */
