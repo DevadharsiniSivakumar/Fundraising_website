@@ -143,7 +143,7 @@ header {
 
 .tab-content {
     display: none;
-    background: #ffffff;
+    background: #e5e2e2;
     padding: 1.5rem;
     border: 1px solid #f39c12;
     border-radius: 5px;
@@ -157,7 +157,8 @@ header {
 /* Community Section */
 .community-section {
     padding: 2rem;
-    background: #121212;
+    background: #5e5d5d;
+    height: fit-content;
 }
 
 .community-section h2 {
@@ -165,6 +166,29 @@ header {
     margin-bottom: 1rem;
     color: #f39c12;
 }
+
+.community-section p{
+    color: #ffffff;
+    font-size: larger;
+    text-align: center;
+}
+.community-section ul{
+    color: #ffffff;
+    font-size: large;
+    text-align: center;
+}
+
+.support-section p{
+    color: #ffffff;
+    font-size: larger;
+    text-align: center;
+}
+.support-section ul{
+    color: #ffffff;
+    font-size: large;
+    text-align: center;
+}
+
 
 /* Support Section */
 .support-section {
